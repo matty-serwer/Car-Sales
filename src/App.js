@@ -23,14 +23,22 @@ const App = () => {
     ]
   };
 
+  const addFeature = (e) => {
+
+  }
+
+  const removeFeature = (e) => {
+    
+  }
+
   return (
     <div className="boxes">
       <div className="box">
         <Header car={state.car} />
-        <AddedFeatures car={state.car} />
+        <AddedFeatures car={state.car} handleClick={removeFeature}/>
       </div>
       <div className="box">
-        <AdditionalFeatures additionalFeatures={state.additionalFeatures} />
+        <AdditionalFeatures additionalFeatures={state.additionalFeatures} handleClick={addFeature} />
         <Total car={state.car} additionalPrice={state.additionalPrice} />
       </div>
     </div>
